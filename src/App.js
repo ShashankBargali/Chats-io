@@ -5,13 +5,13 @@ function App() {
   const [msgs, setMsgs] = useState([])
   const [msgFile, setMsgFile] = useState(0)
   const getMsgs = async () => {
-    const data = await fetch('/msg_json/message_3.json')
+    const data = await fetch('/message_3.json')
     const parsedData = await data.json();
     setMsgs(parsedData.messages.reverse())
     setMsgFile(3)
   }
   const get2Msgs = async () => {
-    const data2 = await fetch('/msg_json/message_2.json')
+    const data2 = await fetch('/message_2.json')
     const parsedData2 = await data2.json();
     setMsgs(parsedData2.messages.reverse())
     setMsgFile(2)
