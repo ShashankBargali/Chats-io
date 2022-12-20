@@ -39,7 +39,6 @@ function App() {
           }
           const date = new Date(ele.timestamp_ms).toDateString();
           const prevDate = new Date(msgs[prev].timestamp_ms).toDateString();
-          console.log(count)
           if (ele.sender_name === 'ð\x9F\x86\x82ð\x9F\x85·ð\x9F\x85°ð\x9F\x86\x82ð\x9F\x85·ð\x9F\x85°ð\x9F\x85½ð\x9F\x85º') {
             return (
               <>
@@ -65,8 +64,8 @@ function App() {
           }
         })}
         <div className='btnClass'>
-          <button onClick={getMsgs} className="openBtn" style={{ backgroundColor: `${msgFile === 3 ? '#65a3ff' : ''}` }}>Previous</button>
-          <button onClick={get2Msgs} className="openBtn" style={{ backgroundColor: `${msgFile === 2 ? '#65a3ff' : ''}` }}>Next</button>
+          <button onClick={getMsgs} className="openBtn" style={{ backgroundColor: `${msgFile === 3 ? 'rgb(215, 135, 183)' : 'rgb(128, 64, 106)'}` }}>Previous</button>
+          <button onClick={get2Msgs} className="openBtn" style={{ backgroundColor: `${msgFile === 2 ? 'rgb(250, 160, 200)' : 'rgb(255, 0, 170)'}` }}>Next</button>
         </div>
       </div>
     </div>
