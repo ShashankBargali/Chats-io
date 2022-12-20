@@ -1,5 +1,5 @@
 {
-  "name": "chats-io",
+  "name": "chats-io",  "homepage": "http://shashankbargali.github.io/Chats-io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
