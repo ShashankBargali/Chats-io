@@ -1,17 +1,20 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import Spinner from './Spinner';
 
 function App() {
   const [msgs, setMsgs] = useState([])
   const [msgFile, setMsgFile] = useState(0)
   const getMsgs = async () => {
-    const data = await fetch('/message_3.json')
+    // const data = await fetch('/message_3.json')
+    const data = await fetch('/Chats-io/message_3.json')
     const parsedData = await data.json();
     setMsgs(parsedData.messages.reverse())
     setMsgFile(3)
   }
   const get2Msgs = async () => {
-    const data2 = await fetch('/message_2.json')
+    // const data2 = await fetch('/message_2.json')
+    const data2 = await fetch('/Chats-io/message_2.json')
     const parsedData2 = await data2.json();
     setMsgs(parsedData2.messages.reverse())
     setMsgFile(2)
@@ -28,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className='chatSect'>
-        {msgs.map((ele, count) => {
+        {msgs.length === 0 ? <Spinner/> :msgs.map((ele, count) => {
           let prev = count - 1;
           let suc = count + 1;
           if (prev < 0) {
